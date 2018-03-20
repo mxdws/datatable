@@ -1,0 +1,10 @@
+---
+layout: home
+---
+<ul>
+ {% for standing in site.data.epl201718 %}
+  <li>
+      {{ standing.teamName }}
+  </li>
+{% endfor %}
+</ul>
