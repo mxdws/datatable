@@ -2,9 +2,7 @@
 layout: home
 ---
 <ul>
- {% for standing in site.data.epl201718 %}
   <li>
-      {{ standing.teamName }}
+      {{ site.data.epl201718.matchday }}
   </li>
-{% endfor %}
 </ul>
