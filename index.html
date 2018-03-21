@@ -1,13 +1,19 @@
 ---
 layout: home
 ---
-<ul>
-  <li>
-      {{ site.data.epl201718.matchday }}
-  </li>
+<table>
+  <th>
+    <td>Position</td>
+    <td>Team</td>
+    <td>Played</td>
+    <td>Points</td>
+  </th>
   {% for team in site.data.epl201718.standing %}
-    <li>
-        {{ team.teamName }}
-    </li>
+    <tr>
+      <td>{{ team.position }}</td>
+      <td>{{ team.teamName }}</td>
+      <td>{{ team.playedGames }}</td>
+      <td>{{ team.points }}</td>
+    </tr>
   {% endfor %}
-</ul>
+</table>
