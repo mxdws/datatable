@@ -18,3 +18,24 @@ layout: home
     </tr>
   {% endfor %}
 </table>
+
+<table>
+  <tr>
+    <th>Home</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>Away</th>
+    <th>Status</th>
+  </tr>
+  {% for games in site.data.epl201718fix.fixtures %}
+    <tr>
+      <td>{{ games.homeTeamName }}</td>
+      <td>{{ games.goalsHomeTeam }}</td>
+      <td>-</td>
+      <td>{{ games.goalsAwayTeam }}</td>
+      <td>{{ games.awayTeamName }}</td>
+      <td>{{ games.status }}</td>
+    </tr>
+  {% endfor %}
+</table>
