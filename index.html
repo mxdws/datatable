@@ -31,9 +31,9 @@ layout: home
   {% for games in site.data.epl201718fix.fixtures %}
     <tr>
       <td>{{ games.homeTeamName }}</td>
-      <td>{{ games.goalsHomeTeam }}</td>
+      <td>{{ games.result.goalsHomeTeam }}</td>
       <td>-</td>
-      <td>{{ games.goalsAwayTeam }}</td>
+      <td>{{ games.result.goalsAwayTeam }}</td>
       <td>{{ games.awayTeamName }}</td>
       <td>{{ games.status }}</td>
     </tr>
