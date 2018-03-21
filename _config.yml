@@ -37,9 +37,9 @@ minima:
 
 jekyll_get:
   - data: epl201718
-    json: 'https://api.football-data.org/v1/soccerseasons/445/leagueTable'
-  - data: projects
-    json: 'https://18f.gsa.gov/hub/api/projects/'
+    json: 'http://api.football-data.org/v1/soccerseasons/445/leagueTable'
+  - data: space
+    json: 'http://api.open-notify.org/astros.json'
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 #header_pages:
