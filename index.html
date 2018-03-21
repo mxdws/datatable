@@ -29,13 +29,15 @@ layout: home
     <th>Status</th>
   </tr>
   {% for games in site.data.epl201718fix.fixtures %}
-    <tr>
-      <td>{{ games.homeTeamName }}</td>
-      <td>{{ games.result.goalsHomeTeam }}</td>
-      <td>-</td>
-      <td>{{ games.result.goalsAwayTeam }}</td>
-      <td>{{ games.awayTeamName }}</td>
-      <td>{{ games.status }}</td>
-    </tr>
+    {% if games.homeTeamName == "Liverpool FC" or games.awayTeamName == "Liverpool FC" %}
+      <tr>
+        <td>{{ games.homeTeamName }}</td>
+        <td>{{ games.result.goalsHomeTeam }}</td>
+        <td>-</td>
+        <td>{{ games.result.goalsAwayTeam }}</td>
+        <td>{{ games.awayTeamName }}</td>
+        <td>{{ games.status }}</td>
+      </tr>
+    {% endif %}
   {% endfor %}
 </table>
