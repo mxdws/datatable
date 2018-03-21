@@ -34,6 +34,12 @@ show_excerpts: false # set to true to show excerpts on the homepage
 minima:
   date_format: "%b %-d, %Y"
 
+
+jekyll_get:
+  - data: epl201718
+    json: 'https://api.football-data.org/v1/soccerseasons/445/leagueTable'
+  - data: projects
+    json: 'https://18f.gsa.gov/hub/api/projects/'
 # If you want to link only specific pages in your header, uncomment
 # this and add the path to the pages in order as they should show up
 #header_pages:
