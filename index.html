@@ -2,12 +2,12 @@
 layout: home
 ---
 <table>
-  <th>
-    <td>Position</td>
-    <td>Team</td>
-    <td>Played</td>
-    <td>Points</td>
-  </th>
+  <tr>
+    <th>Position</th>
+    <th>Team</th>
+    <th>Played</th>
+    <th>Points</th>
+  </tr>
   {% for team in site.data.epl201718.standing %}
     <tr>
       <td>{{ team.position }}</td>
