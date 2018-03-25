@@ -12,7 +12,7 @@ layout: home
   {% for team in site.data.epl201718.standing %}
     <tr>
       <td>{{ team.position }}</td>
-      <td><a href="/{{ team.teamName | replace: " ", "-"  }}">{{ team.teamName }}</a></td>
+      <td><a href="{{ team.teamName | replace: " ", "-" }}">{{ team.teamName }}</a></td>
       <td>{{ team.playedGames }}</td>
       <td>{{ team.points }}</td>
     </tr>
