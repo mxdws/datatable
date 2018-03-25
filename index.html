@@ -10,12 +10,16 @@ layout: home
     <th>Points</th>
   </tr>
   {% for team in site.data.epl201718.standing %}
-    <tr>
-      <td>{{ team.position }}</td>
-      <td>{{ team.teamName }}</td>
-      <td>{{ team.playedGames }}</td>
-      <td>{{ team.points }}</td>
-    </tr>
+    {% for club in site.data.epl201718teams.teams %}
+      {% if club.name == team.teamName %}
+        <tr>
+          <td>{{ team.position }}</td>
+          <td><a href="/{{ club.name }}">{{ team.teamName }}</a></td>
+          <td>{{ team.playedGames }}</td>
+          <td>{{ team.points }}</td>
+        </tr>
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 </table>
 
