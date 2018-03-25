@@ -1,10 +1,11 @@
 ---
 layout: page
-clubname: Manchester City FC
 permalink: /Manchester-City-FC/
 ---
 
-<h2>{{ page.clubname }} - Fixtures</h2>
+{% assign clubname = "Manchester City FC" %}
+
+<h2>{{ clubname }} - Fixtures</h2>
 <table>
   <tr>
     <th>Home</th>
@@ -15,7 +16,7 @@ permalink: /Manchester-City-FC/
     <th>Status</th>
   </tr>
   {% for games in site.data.epl201718fix.fixtures %}
-    {% if games.homeTeamName == {{ page.clubname }} %}
+    {% if games.homeTeamName == {{ clubname }} %}
       <tr>
         <td>{{ games.homeTeamName }}</td>
         <td>{{ games.result.goalsHomeTeam }}</td>
