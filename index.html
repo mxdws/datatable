@@ -19,25 +19,7 @@ layout: home
   {% endfor %}
 </table>
 
-<table>
-  <tr>
-    <th>Home</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th>Away</th>
-    <th>Status</th>
-  </tr>
-  {% for games in site.data.epl201718fix.fixtures %}
-    {% if games.homeTeamName == "Liverpool FC" or games.awayTeamName == "Liverpool FC" %}
-      <tr>
-        <td>{{ games.homeTeamName }}</td>
-        <td>{{ games.result.goalsHomeTeam }}</td>
-        <td>-</td>
-        <td>{{ games.result.goalsAwayTeam }}</td>
-        <td>{{ games.awayTeamName }}</td>
-        <td>{{ games.status }}</td>
-      </tr>
-    {% endif %}
-  {% endfor %}
-</table>
+
+<div width="100" height="100">
+  {% include /assets/svg/Liverpool-FC.svg %}
+</div>
