@@ -1,0 +1,27 @@
+---
+layout: page
+---
+
+<h2>{{ page.clubname }} - Fixtures</h2>
+<table>
+  <tr>
+    <th>Home</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th>Away</th>
+    <th>Status</th>
+  </tr>
+  {% for games in site.data.epl201718fix.fixtures %}
+    {% if games.homeTeamName == page.clubname or games.awayTeamName == page.clubname %}
+      <tr>
+        <td>{{ games.homeTeamName }}</td>
+        <td>{{ games.result.goalsHomeTeam }}</td>
+        <td>-</td>
+        <td>{{ games.result.goalsAwayTeam }}</td>
+        <td>{{ games.awayTeamName }}</td>
+        <td>{{ games.status }}</td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+</table>
