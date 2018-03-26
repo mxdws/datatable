@@ -15,7 +15,7 @@ permalink: /Liverpool-FC/
     <th>Status</th>
   </tr>
   {% for games in site.data.epl201718fix.fixtures %}
-    {% if games.homeTeamName == "Liverpool FC" or games.awayTeamName == "Liverpool FC" %}
+    {% if {{ page.clubname }} == games.homeTeamName or {{ page.clubname }} == games.awayTeamName %}
       <tr>
         <td>{{ games.homeTeamName }}</td>
         <td>{{ games.result.goalsHomeTeam }}</td>
