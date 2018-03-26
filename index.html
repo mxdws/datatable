@@ -4,9 +4,6 @@ layout: home
 
 <h2>Premier League - Upcoming Fixtures</h2>
 
-{% assign timedFixtures = (site.data.epl201718fix.fixtures | where: "status", "TIMED") %}
-{% assign nextFixtures = (timedFixtures | sort: "date") %}
-
 <table>
   <tr>
     <th>Home</th>
@@ -16,8 +13,8 @@ layout: home
     <th>Away</th>
     <th>Status</th>
   </tr>
-  {% for games in nextFixtures %}
-    {% if games.homeTeamName == page.clubname or games.awayTeamName == page.clubname %}
+  {% for games in site.data.epl201718fix.fixtures %}
+    {% if games.status == "TIMED" %}
       <tr>
         <td>{{ games.homeTeamName }}</td>
         <td>{{ games.result.goalsHomeTeam }}</td>
