@@ -4,7 +4,6 @@ clubname: Liverpool FC
 permalink: /Liverpool-FC/
 ---
 
-{% assign club = "Liverpool FC" %}
 <h2>{{ page.clubname }} - Fixtures</h2>
 <table>
   <tr>
@@ -16,7 +15,7 @@ permalink: /Liverpool-FC/
     <th>Status</th>
   </tr>
   {% for games in site.data.epl201718fix.fixtures %}
-    {% if games.homeTeamName == {{ club }} or games.awayTeamName == {{ club }} %}
+    {% if games.homeTeamName == "Liverpool FC" or games.awayTeamName == "Liverpool FC" %}
       <tr>
         <td>{{ games.homeTeamName }}</td>
         <td>{{ games.result.goalsHomeTeam }}</td>
