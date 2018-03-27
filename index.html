@@ -4,42 +4,6 @@ layout: home
 
 <h2>Premier League - Upcoming Fixtures</h2>
 
-<table>
-  <tr>
-    <th>Home</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th>Away</th>
-    <th>Status</th>
-  </tr>
-  {% for games in site.data.epl201718fix.fixtures %}
-    {% if games.status == "TIMED" %}
-      <tr>
-        <td>{{ games.homeTeamName }}</td>
-        <td>{{ games.result.goalsHomeTeam }}</td>
-        <td>-</td>
-        <td>{{ games.result.goalsAwayTeam }}</td>
-        <td>{{ games.awayTeamName }}</td>
-        <td>{{ games.status }}</td>
-      </tr>
-    {% endif %}
-  {% endfor %}
-</table>
+{% include nextleaguefixtures.html %}
 
-<table>
-  <tr>
-    <th>Position</th>
-    <th>Team</th>
-    <th>Played</th>
-    <th>Points</th>
-  </tr>
-  {% for team in site.data.epl201718.standing %}
-    <tr>
-      <td>{{ team.position }}</td>
-      <td><a href="{{ team.teamName | replace: " ", "-" | replace: "&", "and" }}">{{ team.teamName }}</a></td>
-      <td>{{ team.playedGames }}</td>
-      <td>{{ team.points }}</td>
-    </tr>
-  {% endfor %}
-</table>
+{% include standings.html %}

@@ -1,0 +1,23 @@
+<!-- This is a section that retrieves club fixtures -->
+<table class="clubFixtures">
+  <tr class="clubFixtureHeader">
+    <th class="homeTeam">Home</th>
+    <th class="homeGoals"></th>
+    <th class="separator"></th>
+    <th class="awayGoals"></th>
+    <th class="awayTeam">Away</th>
+    <th class="matchStatus">Status</th>
+  </tr>
+  {% for games in site.data.epl201718fix.fixtures %}
+    {% if games.homeTeamName == page.clubname or games.awayTeamName == page.clubname %}
+      <tr class="clubFixtureRow">
+        <td class="homeTeam">{{ games.homeTeamName }}</td>
+        <td class="homeGoals">{{ games.result.goalsHomeTeam }}</td>
+        <td class="separator">-</td>
+        <td class="awayGoals">{{ games.result.goalsAwayTeam }}</td>
+        <td class="awayTeam">{{ games.awayTeamName }}</td>
+        <td class="matchStatus">{{ games.status }}</td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+</table>
