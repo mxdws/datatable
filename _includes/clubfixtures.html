@@ -12,7 +12,7 @@
   {% for games in site.data.epl201718fix.fixtures %}
     {% if games.homeTeamName == page.clubname or games.awayTeamName == page.clubname %}
       <tr class="clubFixtureRow">
-        <td class="date">{{ games.date |  date: "%m/%d/%Y" }}</td>
+        <td class="date">{{ games.date |  date: "%d/%m/%Y" }}</td>
         <td class="homeTeam">{{ games.homeTeamName }}</td>
         <td class="homeGoals">{{ games.result.goalsHomeTeam }}</td>
         <td class="separator">-</td>

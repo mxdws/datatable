@@ -11,7 +11,7 @@
   {% for games in site.data.epl201718fix.fixtures %}
     {% if games.status == "TIMED" %}
       <tr class="nextClubFixturesRow">
-        <td class="date">{{ games.date |  date: "%m/%d/%Y" }}</td>
+        <td class="date">{{ games.date |  date: "%d/%m/%Y" }}</td>
         <td class="homeTeam">{{ games.homeTeamName }}</td>
         <td class="homeGoals">{{ games.result.goalsHomeTeam }}</td>
         <td class="separator">-</td>
