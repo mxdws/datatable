@@ -9,12 +9,12 @@
     <th class="goalsfor">GF</th>
     <th class="goalsagainst">GA</th>
     <th class="goaldiff">Diff</th>
-    <th class="points">Pnts</th>
+    <th class="points">Pts</th>
   </tr>
   {% for team in site.data.epl201718.standing %}
     <tr class="standingsRow">
       <td class="position">{{ team.position }}</td>
-      <td class="clubname"><a href="{{ team.teamName | replace: " ", "-" | replace: "&", "and" }}">{{ team.teamName }}</a></td>
+      <td class="clubname"><a href="{{ team.teamName | replace: " ", "-" | replace: "&", "and" }}">{{ team.teamName | replace: " FC", "" }}</a></td>
       <td class="played">{{ team.playedGames }}</td>
       <td class="won">{{ team.wins }}</td>
       <td class="drawn">{{ team.draws }}</td>
