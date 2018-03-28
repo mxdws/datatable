@@ -9,7 +9,8 @@
     <th class="awayTeam"></th>
     <th class="matchStatus"></th>
   </tr>
-  {% for games in site.data.epl201718fix.fixtures %}
+  {% assign finishedGames = site.data.epl201718fix.fixtures | where:"status","FINISHED" %}
+  {% for games in finishedGames %}
     {% if games.homeTeamName == page.clubname or games.awayTeamName == page.clubname %}
       <tr class="clubFixtureRow">
         <td class="date">{{ games.date |  date: "%d.%m" }}</td>
