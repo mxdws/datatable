@@ -9,7 +9,7 @@
     <th class="matchStatus">Status</th>
   </tr>
   {% assign timedGames = site.data.epl201718fix.fixtures | where:"status","TIMED" %}
-  {% for games in timedGames %}
+  {% for games in timedGames limit:10 %}
       <tr class="nextLeagueFixturesRow">
         <td class="date">{{ games.date |  date: "%d.%m" }}</td>
         <td class="homeTeam">{{ games.homeTeamName | replace: " FC", "" }}</td>
