@@ -8,8 +8,8 @@
     <th class="awayTeam">Away</th>
     <th class="matchStatus">Status</th>
   </tr>
-  {% for games in site.data.epl201718fix.fixtures %}
-    {% if games.status == "TIMED" %}
+  {% assign timedGames = site.data.epl201718fix.fixtures | where:"status","TIMED" %}
+  {% for games in timedGames %}
       <tr class="nextLeagueFixturesRow">
         <td class="date">{{ games.date |  date: "%d.%m" }}</td>
         <td class="homeTeam">{{ games.homeTeamName | replace: " FC", "" }}</td>
@@ -19,6 +19,5 @@
         <td class="awayTeam">{{ games.awayTeamName }}</td>
         <td class="matchStatus">{{ games.status }}</td>
       </tr>
-    {% endif %}
   {% endfor %}
 </table>
