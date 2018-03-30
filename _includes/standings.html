@@ -1,28 +1,30 @@
-<table class="standings">
-  <tr class="standingsHeader">
-    <th class="position"></th>
-    <th class="clubname"></th>
-    <th class="played">Pl</th>
-    <th class="won">W</th>
-    <th class="drawn">D</th>
-    <th class="lost">L</th>
-    <th class="goalsfor">GF</th>
-    <th class="goalsagainst">GA</th>
-    <th class="goaldiff">Diff</th>
-    <th class="points">Pts</th>
-  </tr>
-  {% for team in site.data.epl201718.standing %}
-    <tr class="standingsRow">
-      <td class="position">{{ team.position }}</td>
-      <td class="clubname"><a href="{{ team.teamName | replace: " ", "-" | replace: "&", "and" }}">{{ team.teamName | replace: " FC", "" }}</a></td>
-      <td class="played">{{ team.playedGames }}</td>
-      <td class="won">{{ team.wins }}</td>
-      <td class="drawn">{{ team.draws }}</td>
-      <td class="lost">{{ team.losses }}</td>
-      <td class="goalsfor">{{ team.goals }}</td>
-      <td class="goalsagainst">{{ team.goalsAgainst }}</td>
-      <td class="goaldiff">{{ team.goalDifference }}</td>
-      <td class="points">{{ team.points }}</td>
+<section id="standingsSection">
+  <table class="standings">
+    <tr class="standingsHeader">
+      <th class="position"></th>
+      <th class="clubname"></th>
+      <th class="played">Pl</th>
+      <th class="won">W</th>
+      <th class="drawn">D</th>
+      <th class="lost">L</th>
+      <th class="goalsfor">GF</th>
+      <th class="goalsagainst">GA</th>
+      <th class="goaldiff">Diff</th>
+      <th class="points">Pts</th>
     </tr>
-  {% endfor %}
-</table>
+    {% for team in site.data.epl201718.standing %}
+      <tr class="standingsRow">
+        <td class="position">{{ team.position }}</td>
+        <td class="clubname"><a href="{{ team.teamName | replace: " ", "-" | replace: "&", "and" }}">{{ team.teamName | replace: " FC", "" }}</a></td>
+        <td class="played">{{ team.playedGames }}</td>
+        <td class="won">{{ team.wins }}</td>
+        <td class="drawn">{{ team.draws }}</td>
+        <td class="lost">{{ team.losses }}</td>
+        <td class="goalsfor">{{ team.goals }}</td>
+        <td class="goalsagainst">{{ team.goalsAgainst }}</td>
+        <td class="goaldiff">{{ team.goalDifference }}</td>
+        <td class="points">{{ team.points }}</td>
+      </tr>
+    {% endfor %}
+  </table>
+</section>
