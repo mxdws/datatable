@@ -22,7 +22,8 @@ rss: rss
 #   instance: example.com
 # - username: jekyll2
 #   instance: example.com
-
+sass:
+    sass_dir: _sass
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
