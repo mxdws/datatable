@@ -7,7 +7,7 @@
       <th class="separator"></th>
       <th class="awayGoals"></th>
       <th class="awayTeam">Away</th>
-      <th class="matchStatus">Status</th>
+      <th class="matchTime">Status</th>
     </tr>
     {% assign timedGames = site.data.epl201718fix.fixtures | where:"status","TIMED" %}
     {% for games in timedGames limit:10 %}
@@ -18,7 +18,7 @@
           <td class="separator">-</td>
           <td class="awayGoals">{{ games.result.goalsAwayTeam | replace: " FC", "" }}</td>
           <td class="awayTeam">{{ games.awayTeamName }}</td>
-          <td class="matchStatus">{{ games.status }}</td>
+          <td class="matchTime">{{ games.date |  date: "%H:%M" }}</td>
         </tr>
     {% endfor %}
   </table>

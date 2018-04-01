@@ -1,3 +1,4 @@
+$primary-color: #f48042
 
 body
   font-family: 'Raleway'
@@ -11,7 +12,7 @@ header
   .logo
     padding: .5em .5em
     a, a:visited
-      color: #f48042
+      color: $primary-color
       font-family: 'Lobster', cursive
       font-size: 2em
       text-decoration: none
@@ -35,13 +36,16 @@ button
 
 
 #standingsSection
+  border: 2px $primary-color solid
+  border-radius: 15px
+  margin: 5px 10px
+  padding: 10px
   .standings
     min-width: 400px
     color: #445c7b
     font-size: 12px
     font-weight: 500
     line-height: 16px
-    margin-bottom: 36px
 
   .position
     text-align: center
@@ -77,6 +81,10 @@ button
 
 #fixturesSection
   .nextLeagueFixtures
+    border: 2px $primary-color solid
+    border-radius: 15px
+    margin: 5px 10px
+    padding: 10px
     color: #445c7b
     font-family: 'Raleway'
     font-size: 12px
