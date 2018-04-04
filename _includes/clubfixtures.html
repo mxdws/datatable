@@ -1,27 +1,29 @@
 <!-- This is a section that retrieves club fixtures -->
 <h2>Fixtures</h2>
-<table class="clubFixtures">
-  <tr class="clubFixtureHeader">
-    <th class="date"></th>
-    <th class="homeTeam"></th>
-    <th class="homeGoals"></th>
-    <th class="separator"></th>
-    <th class="awayGoals"></th>
-    <th class="awayTeam"></th>
-    <th class="matchStatus"></th>
-  </tr>
-  {% assign finishedGames = site.data.epl201718fix.fixtures | where:"status","FINISHED" %}
-  {% for games in finishedGames %}
-    {% if games.homeTeamName == page.clubname or games.awayTeamName == page.clubname %}
-      <tr class="clubFixtureRow">
-        <td class="date">{{ games.date |  date: "%d.%m" }}</td>
-        <td class="homeTeam">{{ games.homeTeamName | replace: " FC", "" }}</td>
-        <td class="homeGoals">{{ games.result.goalsHomeTeam }}</td>
-        <td class="separator">-</td>
-        <td class="awayGoals">{{ games.result.goalsAwayTeam }}</td>
-        <td class="awayTeam">{{ games.awayTeamName | replace: " FC", "" }}</td>
-        <td class="matchStatus">{{ games.status }}</td>
-      </tr>
-    {% endif %}
-  {% endfor %}
-</table>
+<section id="clubFixturesSection">
+  <table class="clubFixtures">
+    <tr class="clubFixtureHeader">
+      <th class="date"></th>
+      <th class="homeTeam"></th>
+      <th class="homeGoals"></th>
+      <th class="separator"></th>
+      <th class="awayGoals"></th>
+      <th class="awayTeam"></th>
+      <th class="matchStatus"></th>
+    </tr>
+    {% assign finishedGames = site.data.epl201718fix.fixtures | where:"status","FINISHED" %}
+    {% for games in finishedGames %}
+      {% if games.homeTeamName == page.clubname or games.awayTeamName == page.clubname %}
+        <tr class="clubFixtureRow">
+          <td class="date">{{ games.date |  date: "%d.%m" }}</td>
+          <td class="homeTeam">{{ games.homeTeamName | replace: " FC", "" }}</td>
+          <td class="homeGoals">{{ games.result.goalsHomeTeam }}</td>
+          <td class="separator">-</td>
+          <td class="awayGoals">{{ games.result.goalsAwayTeam }}</td>
+          <td class="awayTeam">{{ games.awayTeamName | replace: " FC", "" }}</td>
+          <td class="matchStatus">{{ games.status }}</td>
+        </tr>
+      {% endif %}
+    {% endfor %}
+  </table>
+</section>

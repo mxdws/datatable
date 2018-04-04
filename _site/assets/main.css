@@ -1,0 +1,118 @@
+/**
+ * Reset some basic elements
+ */
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Basic styling
+ */
+/**
+ * Site header
+ */
+.site-header {
+  border-top: 5px solid #424242;
+  border-bottom: 1px solid #e8e8e8;
+  min-height: 55.95px;
+  position: relative; }
+
+body {
+  font-family: "Raleway";
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.5;
+  padding: 2em 1em; }
+
+header {
+  border-bottom: 1px solid lightgrey; }
+  header .logo {
+    padding: 0.5em 0.5em; }
+    header .logo a, header .logo a:visited {
+      color: #f48042;
+      font-family: "Lobster", cursive;
+      font-size: 2em;
+      text-decoration: none; }
+
+.league-summary {
+  display: flex;
+  align-content: space-around;
+  flex-wrap: wrap; }
+
+button {
+  color: red;
+  font-size: 8pt;
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: 1px solid red;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none; }
+
+#standingsSection {
+  border: 2px #f48042 solid;
+  border-radius: 15px;
+  margin: 5px 10px;
+  padding: 10px; }
+  #standingsSection .standings {
+    min-width: 400px;
+    color: #445c7b;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px; }
+  #standingsSection .position {
+    text-align: center; }
+  #standingsSection table {
+    border: none;
+    border-collapse: collapse; }
+    #standingsSection table th, #standingsSection table td {
+      padding: 5px;
+      border-bottom: 2px solid lightgrey; }
+  #standingsSection .standingsRow .won, #standingsSection .standingsRow .drawn, #standingsSection .standingsRow .lost, #standingsSection .standingsRow .goalsfor, #standingsSection .standingsRow .goalsagainst, #standingsSection .standingsRow .goaldiff, #standingsSection .standingsRow .points {
+    text-align: center; }
+  #standingsSection .standingsRow .goalsfor, #standingsSection .standingsRow .goalsagainst {
+    border-radius: 15%;
+    color: white; }
+  #standingsSection .standingsRow .goalsfor {
+    background: green; }
+  #standingsSection .standingsRow .goalsagainst {
+    background: red; }
+  #standingsSection a, #standingsSection a:visited {
+    color: #445c7b;
+    text-decoration: none; }
+  #standingsSection a:hover {
+    color: purple;
+    text-decoration: none; }
+
+#fixturesSection .nextLeagueFixtures {
+  border: 2px #f48042 solid;
+  border-radius: 15px;
+  margin: 5px 10px;
+  padding: 10px;
+  color: #445c7b;
+  font-family: "Raleway";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px; }
+#fixturesSection .homeTeam {
+  text-align: right; }
+#fixturesSection .awayTeam {
+  text-align: left; }
+
+#clubFixturesSection .clubFixtures {
+  border: 2px #f48042 solid;
+  border-radius: 15px;
+  margin: 5px 10px;
+  padding: 10px;
+  color: #445c7b;
+  font-family: "Raleway";
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px; }
+#clubFixturesSection .homeTeam {
+  text-align: right; }
+#clubFixturesSection .awayTeam {
+  text-align: left; }
