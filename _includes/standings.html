@@ -1,3 +1,41 @@
+{% if page.leagueId == 445 %}
+  {% assign leagueStandings = site.data.epl2017lg.standing %}
+{% endif %}
+{% if page.leagueId == 446 %}
+  {% assign leagueStandings = site.data.elc2017lg.standing %}
+{% endif %}
+{% if page.leagueId == 447 %}
+  {% assign leagueStandings = site.data.el12017lg.standing %}
+{% endif %}
+{% if page.leagueId == 448 %}
+  {% assign leagueStandings = site.data.el22017lg.standing %}
+{% endif %}
+{% if page.leagueId == 450 %}
+  {% assign leagueStandings = site.data.fl12017lg.standing %}
+{% endif %}
+{% if page.leagueId == 451 %}
+  {% assign leagueStandings = site.data.fl22017lg.standing %}
+{% endif %}
+{% if page.leagueId == 452 %}
+  {% assign leagueStandings = site.data.bl12017lg.standing %}
+{% endif %}
+{% if page.leagueId == 453 %}
+  {% assign leagueStandings = site.data.bl22017lg.standing %}
+{% endif %}
+{% if page.leagueId == 455 %}
+  {% assign leagueStandings = site.data.pd2017lg.standing %}
+{% endif %}
+{% if page.leagueId == 456 %}
+  {% assign leagueStandings = site.data.sa2017lg.standing %}
+{% endif %}
+{% if page.leagueId == 459 %}
+  {% assign leagueStandings = site.data.sb2017lg.standing %}
+{% endif %}
+{% if page.leagueId == 464 %}
+  {% assign leagueStandings = site.data.cl2017lg.standing %}
+{% endif %}
+
+
 <section id="standingsSection">
   <table class="standings">
     <tr class="standingsHeader">
@@ -12,7 +50,7 @@
       <th class="goaldiff">Diff</th>
       <th class="points">Pts</th>
     </tr>
-    {% for team in site.data.epl201718.standing %}
+    {% for team in leagueStandings %}
       <tr class="standingsRow">
         <td class="position">{{ team.position }}</td>
         <td class="clubname"><a href="{{ team.teamName | replace: " ", "-" | replace: "&", "and" }}">{{ team.teamName | replace: " FC", "" }}</a></td>
