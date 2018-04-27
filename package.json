@@ -1,9 +1,14 @@
 {
-  "name": "plainfootball.com",
+  "name": "datatable",
   "version": "0.0.1",
-  "description": "football leagues and scores",
-  "main": "grunt.js",
-  "dependencies": {
+  "description": "Football scores and leagues",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Martin Dawson",
+  "license": "ISC",
+  "devDependencies": {
     "dotenv": "^4.0.0",
     "gravatar": "~1.0.6",
     "gulp": "~3.8.1",
@@ -12,23 +17,20 @@
     "gulp-prompt": "~0.1.1",
     "gulp-shell": "~0.2.7",
     "gulp-util": "~2.2.17",
-    "run-sequence": "^1.2.2",
-  },
-  "engines": {
-    "node": ">=0.8.x"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "run-sequence": "^1.2.2"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mxdws/datatable.git"
+    "url": "https://github.com/mxdws/datatable.git"
   },
   "keywords": [
-    "blog",
     "jekyll",
-    "static"
+    "gulp",
+    "sass",
+    "browsersync"
   ],
-  "author": "Martin Dawson",
-  "license": "MIT"
+  "bugs": {
+    "url": "https://github.com/mxdws/datatable/issues"
+  },
+  "homepage": "https://github.com/mxdws/datatable"
 }
