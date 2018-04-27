@@ -1,0 +1,13 @@
+{"competitions":[{"compId": 445,"compCode": "PL","compCountry": "England","compName": "Premier League","compStart": "2017"},
+{"compId": 446,"compCode": "ELC","compCountry": "England","compName": "Championship","compStart": "2017"},
+{"compId": 447,"compCode": "EL1","compCountry": "England","compName": "League One","compStart": "2017"},
+{"compId": 448,"compCode": "EL2","compCountry": "England","compName": "League Two","compStart": "2017"},
+{"compId": 450,"compCode": "FL1","compCountry": "France","compName": "Ligue 1","compStart": "2017"},
+{"compId": 451,"compCode": "FL2","compCountry": "France","compName": "Ligue 2","compStart": "2017"},
+{"compId": 452,"compCode": "BL1","compCountry": "Germany","compName": "1. Bundesliga","compStart": "2017"},
+{"compId": 453,"compCode": "BL2","compCountry": "Germany","compName": "2. Bundesliga","compStart": "2017"},
+{"compId": 455,"compCode": "PD","compCountry": "Spain","compName": "Primera Dvision","compStart": "2017"},
+{"compId": 456,"compCode": "SA","compCountry": "Italy","compName": "Serie A","compStart": "2017"},
+{"compId": 459,"compCode": "SB","compCountry": "Italy","compName": "Serie B","compStart": "2017"},
+{"compId": 464,"compCode": "CL","compCountry": "Europe","compName": "Champions League","compStart": "2017"}]}
+
