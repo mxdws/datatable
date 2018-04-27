@@ -56,7 +56,7 @@ gulp.task('getData', function() {
   var options = {
     'method': 'GET',
     'hostname': 'api.football-data.org',
-    'path': '/v1/soccerseasons/446/fixtures',
+    'path': '/v1/soccerseasons/445/fixtures',
     'headers': {
       'X-Auth-Token': token
     }
@@ -71,7 +71,7 @@ gulp.task('getData', function() {
 
       // Try and write the result to a data file
 
-      fs.writeFile('./_data/footballdata.json', body, function(err) {
+      fs.writeFile('./_data/epl201718fix.json', body, function(err) {
         if(err) {
           console.log(err);
         } else {
