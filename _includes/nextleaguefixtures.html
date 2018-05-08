@@ -1,3 +1,40 @@
+{% if page.leagueId == 445 %}
+  {% assign timedGames = site.data.epl-201718-fixtures.fixtures | where:"status","TIMED" %}
+{% endif %}
+{% if page.leagueId == 446 %}
+{% assign timedGames = site.data.elc-201718-fixtures.fixtures | where:"status","TIMED" %}
+{% endif %}
+{% if page.leagueId == 447 %}
+  {% assign timedGames = site.data.el1-201718-fixtures.fixtures | where:"status","TIMED" %}
+{% endif %}
+{% if page.leagueId == 448 %}
+  {% assign timedGames = site.data.el2-201718-fixtures.fixtures | where:"status","TIMED" %}
+{% endif %}
+{% if page.leagueId == 450 %}
+  {% assign timedGames = site.data.fl1-201718-fixtures.fixtures | where:"status","TIMED" %}
+{% endif %}
+{% if page.leagueId == 451 %}
+  {% assign timedGames = site.data.fl2-201718-fixtures.fixtures | where:"status","TIMED" %}
+{% endif %}
+{% if page.leagueId == 452 %}
+  {% assign timedGames = site.data.bl1-201718-fixtures.fixtures | where:"status","TIMED" %}
+{% endif %}
+{% if page.leagueId == 453 %}
+  {% assign timedGames = site.data.bl2-201718-fixtures.fixtures | where:"status","TIMED" %}
+{% endif %}
+{% if page.leagueId == 455 %}
+  {% assign timedGames = site.data.pd-201718-fixtures.fixtures | where:"status","TIMED" %}
+{% endif %}
+{% if page.leagueId == 456 %}
+  {% assign timedGames = site.data.sa-201718-fixtures.fixtures | where:"status","TIMED" %}
+{% endif %}
+{% if page.leagueId == 459 %}
+  {% assign timedGames = site.data.sb-201718-fixtures.fixtures | where:"status","TIMED" %}
+{% endif %}
+{% if page.leagueId == 464 %}
+  {% assign timedGames = site.data.cl-201718-fixtures.fixtures | where:"status","TIMED" %}
+{% endif %}
+
 <section id="fixturesSection">
   <table class="nextLeagueFixtures">
     <tr class="nextLeagueFixturesHeader">
@@ -9,7 +46,6 @@
       <th class="awayTeam">Away</th>
       <th class="matchTime">Status</th>
     </tr>
-    {% assign timedGames = site.data.epl201718fix.fixtures | where:"status","TIMED" %}
     {% for games in timedGames %}
         <tr class="nextLeagueFixturesRow">
           <td class="date">{{ games.date |  date: "%d.%m" }}</td>
