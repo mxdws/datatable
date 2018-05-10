@@ -31,6 +31,7 @@ gulp.task('jekyll', function() {
   return gulp.src('', {quiet: false})
     .pipe(shell([
       'rm -rf ' + paths.deploy,
+      './bashbuild.sh',
       'jekyll build',
       'cp -R _site/ ' + paths.deploy
     ]));
@@ -48,7 +49,7 @@ gulp.task("tasks", function() {
 
 
 // Get source data
-gulp.task('getData', function() {
+/*gulp.task('getData', function(callback) {
 
   console.log("Getting football data from api");
 
@@ -58,6 +59,42 @@ gulp.task('getData', function() {
   // http://www.richardrodger.com/2011/04/21/node-js-how-to-write-a-for-loop-with-callbacks/#.WuzE6y-ZPVr
 
   repeater(0)
+  repeater(1)
+  repeater(2)
+  repeater(3)
+  repeater(4)
+  repeater(5)
+  repeater(6)
+  repeater(7)
+  repeater(8)
+  repeater(9)
+  repeater(10)
+  repeater(11)
+  repeater(12)
+  repeater(13)
+  repeater(14)
+  repeater(15)
+  repeater(16)
+  repeater(17)
+  repeater(18)
+  repeater(19)
+  repeater(20)
+  repeater(21)
+  repeater(22)
+  repeater(23)
+  repeater(24)
+  repeater(25)
+  repeater(26)
+  repeater(27)
+  repeater(28)
+  repeater(29)
+  repeater(30)
+  repeater(31)
+  repeater(32)
+  repeater(33)
+  repeater(34)
+  repeater(35)
+  callback();
 });
 
 function repeater(counter) {
@@ -68,7 +105,7 @@ function repeater(counter) {
   var leaguecodes= ['epl','elc','el1','el2','fl1','fl2','bl1','bl2','pd','sa','sb','cl'];
   var season = '201718';
 
-  if ( counter < ( competitions.length * metrics.length )) {
+  //if ( counter < ( competitions.length * metrics.length )) {
     var a = Math.floor(counter / 3);
     var b = counter % 3;
     console.log("Competition: " + a + ", Metric: " + b)
@@ -91,7 +128,7 @@ function repeater(counter) {
             console.log(err);
           } else {
             console.log('External data saved - ' + leaguecodes[a] + '-' + season + '-' + datasuffix[b] + '.json');
-            repeater( counter + 1 );
+            //repeater( counter + 1 );
           }
         });
 
@@ -100,14 +137,14 @@ function repeater(counter) {
         console.log("Couldn't get data :-(");
       }
     });
-  }
-}
+  //}
+}*/
 
 
 // Build and optimise the site and serve it locally.
 gulp.task('build', function(callback) {
   runSequence(
-    'getData',
+    //'getData',
     'jekyll',
     ['styles'],
     callback
